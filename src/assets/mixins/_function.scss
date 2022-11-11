@@ -1,0 +1,5 @@
+@mixin main {
+  padding-top: $main-padding-y/1.5;
+  display: flex;
+  min-height: $main-min-height;
+}

@@ -1,0 +1,40 @@
+$font-family-base: "Roboto", sans-serif, "Segoe UI", "GeezaPro", "DejaVu Serif",
+  "-apple-system", "BlinkMacSystemFont";
+$font-size-base: 0.875rem;
+$body-bg: #fafbfe;
+
+$orange: orange;
+
+$base-main-colors: (
+  "orange": $orange,
+  "blue": $blue,
+);
+
+$colors: map-merge($colors, $base-main-colors);
+// merge theme color
+$theme-colors: map-merge($theme-colors, $colors);
+$theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
+
+// merge bg color
+$utilities-bg: map-merge($utilities-bg, $colors);
+$utilities-bg-colors: map-loop($utilities-bg, rgba-css-var, "$key", "bg");
+
+// merge color
+
+$utilities-text: map-merge($utilities-colors, $colors);
+$utilities-text-colors: map-loop($utilities-text, rgba-css-var, "$key", "text");
+
+// grid
+$grid-columns: 12;
+$transition: ease 200ms all;
+$grid-gutter-width: 1rem;
+
+// dropdown
+$dropdown-font-size: $font-size-base;
+
+//form
+$form-feedback-icon-loading: url("data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJsb2FkZXItMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQogICAgIHdpZHRoPSI0MHB4IiBoZWlnaHQ9IjQwcHgiIHZpZXdCb3g9IjAgMCA1MCA1MCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTAgNTA7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCiAgPHBhdGggZmlsbD0iIzAwMCIgZD0iTTQzLjkzNSwyNS4xNDVjMC0xMC4zMTgtOC4zNjQtMTguNjgzLTE4LjY4My0xOC42ODNjLTEwLjMxOCwwLTE4LjY4Myw4LjM2NS0xOC42ODMsMTguNjgzaDQuMDY4YzAtOC4wNzEsNi41NDMtMTQuNjE1LDE0LjYxNS0xNC42MTVjOC4wNzIsMCwxNC42MTUsNi41NDMsMTQuNjE1LDE0LjYxNUg0My45MzV6Ij4NCiAgICA8YW5pbWF0ZVRyYW5zZm9ybSBhdHRyaWJ1dGVUeXBlPSJ4bWwiDQogICAgICBhdHRyaWJ1dGVOYW1lPSJ0cmFuc2Zvcm0iDQogICAgICB0eXBlPSJyb3RhdGUiDQogICAgICBmcm9tPSIwIDI1IDI1Ig0KICAgICAgdG89IjM2MCAyNSAyNSINCiAgICAgIGR1cj0iMC42cyINCiAgICAgIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIi8+DQogICAgPC9wYXRoPg0KICA8L3N2Zz4=");
+
+//
+$thumb-width-lg: 200px;
+$thumb-height-lg: 200px;

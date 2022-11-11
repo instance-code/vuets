@@ -1,0 +1,16 @@
+.navbar-top {
+  width: calc(100% - #{$sidebar_lg});
+  right: 0;
+  left: auto;
+  transition: ease width 200ms;
+  &.fluid {
+    width: calc(100% - #{$sidebar_sm});
+    transition: ease width 200ms;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .navbar-top {
+    width: calc(100% - #{$sidebar_sm});
+  }
+}
